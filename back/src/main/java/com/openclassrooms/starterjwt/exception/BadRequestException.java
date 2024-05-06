@@ -1,8 +1,8 @@
-package com.openclassrooms.starterjwt.exception;
+    package com.openclassrooms.starterjwt.exception;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(value= HttpStatus.BAD_REQUEST)
-public class BadRequestException extends RuntimeException {
-}
+    @ResponseStatus(value= HttpStatus.BAD_REQUEST)
+    public class BadRequestException extends RuntimeException {
+    }
