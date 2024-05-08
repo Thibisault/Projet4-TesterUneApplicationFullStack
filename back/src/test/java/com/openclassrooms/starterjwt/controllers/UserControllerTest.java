@@ -29,7 +29,6 @@ class UserControllerTest {
 
     @Test
     void findById_UserExists() {
-        // Arrange
         User user = new User();
         user.setId(1L).setEmail("user@example.com");
         UserDto userDto = new UserDto();
@@ -37,10 +36,8 @@ class UserControllerTest {
         when(userService.findById(1L)).thenReturn(user);
         when(userMapper.toDto(user)).thenReturn(userDto);
 
-        // Act
         ResponseEntity<?> response = userController.findById("1");
 
-        // Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(userDto, response.getBody());
 
