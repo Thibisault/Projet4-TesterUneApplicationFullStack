@@ -87,14 +87,12 @@ describe('account spec', () => {
 
     cy.get('span[routerlink="register"]').click()
 
-    //Register form
     cy.get('input[formControlName="firstName"]').type('Monsieur A');
     cy.get('input[formControlName="lastName"]').type('Mister A');
     cy.get('input[formControlName="email"]').type('a@a');
     cy.get('input[formControlName="password"]').type('MonsieurTestA');
     cy.get('button[type="submit"]').click()
 
-    //Login Form
     cy.get('input[formControlName=email]').type("a@a")
     cy.get('input[formControlName=password]').type(`${"MonsieurTestA"}{enter}{enter}`)
     cy.contains('span', 'Create').click();

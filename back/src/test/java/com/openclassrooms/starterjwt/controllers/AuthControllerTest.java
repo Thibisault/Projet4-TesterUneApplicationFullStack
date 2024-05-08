@@ -53,6 +53,4 @@ class AuthControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         verify(userRepository).save(any());
     }
-
-    // Ajoutez d'autres tests ici
 }
