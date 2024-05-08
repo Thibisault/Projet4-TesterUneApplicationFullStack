@@ -141,7 +141,7 @@ class UserServiceTest {
         when(userRepository.existsByEmail(userEmail)).thenReturn(true);
 
         Exception exception = assertThrows(RuntimeException.class, () -> {
-            userService.addUser(duplicateUserDto); // Utilisation du UserDto ici
+            userService.addUser(duplicateUserDto);
         });
 
         String expectedMessage = "Email already in use";
